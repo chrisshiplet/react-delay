@@ -24,11 +24,16 @@ let Delay = React.createClass({
 
   componentDidMount()
   {
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       this.setState({
         waiting: false
       });
     }, this.props.wait);
+  },
+
+  componentWillUnmount()
+  {
+    clearTimeout(this.timer);
   },
 
   render()
