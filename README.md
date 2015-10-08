@@ -1,6 +1,6 @@
 # react-delay
 
-[![npm version](https://badge.fury.io/js/react-delay.svg)](https://github.com/nearengine/react-delay)
+[![npm version](https://badge.fury.io/js/react-delay.svg)](https://www.npmjs.com/package/react-delay)
 
 Easily delay rendering of child components with a timer
 
