@@ -22,7 +22,7 @@
     "webpack": "^2.4.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.7",
-    "react": "^0.14.0"
+    "prop-types": ">=15.5.7",
+    "react": ">=0.14.0"
   }
 }
