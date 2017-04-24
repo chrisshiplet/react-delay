@@ -31,6 +31,7 @@ class Delay extends Component {
 }
 
 Delay.propTypes = {
+  children: PropTypes.node,
   wait: PropTypes.number
 };
 
