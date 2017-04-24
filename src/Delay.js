@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 let Delay = React.createClass({
 
   displayName: 'Delay',
 
   propTypes: {
-    wait: React.PropTypes.number
+    wait: PropTypes.number
   },
 
   getDefaultProps()
