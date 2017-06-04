@@ -7,14 +7,15 @@ module.exports = {
     libraryTarget: 'umd'
   },
   externals: {
-    'react': 'react'
+    'react': 'react',
+    'prop-types': 'prop-types'
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       }
     ]
   }

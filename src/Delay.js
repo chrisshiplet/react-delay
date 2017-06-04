@@ -1,49 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-let Delay = React.createClass({
-
-  displayName: 'Delay',
-
-  propTypes: {
-    wait: React.PropTypes.number
-  },
-
-  getDefaultProps()
-  {
-    return {
-      wait: 250
-    };
-  },
-
-  getInitialState()
-  {
-    return {
+class Delay extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       waiting: true
     };
-  },
+  }
 
-  componentDidMount()
-  {
+  componentDidMount() {
     this.timer = setTimeout(() => {
       this.setState({
         waiting: false
       });
     }, this.props.wait);
-  },
+  }
 
-  componentWillUnmount()
-  {
+  componentWillUnmount() {
     clearTimeout(this.timer);
-  },
+  }
 
-  render()
-  {
-    if (! this.state.waiting) {
+  render() {
+    if (!this.state.waiting) {
       return this.props.children;
     }
 
     return null;
   }
-});
+}
+
+Delay.propTypes = {
+  children: PropTypes.node,
+  wait: PropTypes.number
+};
+
+Delay.defaultProps = {
+  wait: 250
+};
 
 export default Delay;
