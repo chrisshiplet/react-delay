@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Delay extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      waiting: true
-    };
-  }
+  static propTypes = {
+    children: PropTypes.node,
+    wait: PropTypes.number,
+  };
+
+  static defaultProps = {
+    wait: 250,
+  };
+
+  state = {
+    waiting: true,
+  };
 
   componentDidMount() {
     this.timer = setTimeout(() => {
@@ -29,14 +35,5 @@ class Delay extends Component {
     return null;
   }
 }
-
-Delay.propTypes = {
-  children: PropTypes.node,
-  wait: PropTypes.number
-};
-
-Delay.defaultProps = {
-  wait: 250
-};
 
 export default Delay;
