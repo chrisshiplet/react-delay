@@ -1,6 +1,6 @@
 {
   "name": "react-delay",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Easily delay rendering of child components with a timer",
   "main": "lib/Delay.js",
   "scripts": {
