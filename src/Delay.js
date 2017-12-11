@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 class Delay extends Component {
   static propTypes = {
     children: PropTypes.node,
+    childrenWaiting: PropTypes.node,
     wait: PropTypes.number,
   };
 
   static defaultProps = {
     wait: 250,
+    childrenWaiting: null
   };
 
   state = {
@@ -32,7 +34,7 @@ class Delay extends Component {
       return this.props.children;
     }
 
-    return null;
+    return this.props.childrenWaiting;
   }
 }
 
